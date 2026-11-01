@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://techkarnan.github.io/simply-explained/sitemap.xml
