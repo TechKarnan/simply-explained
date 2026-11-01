@@ -8,49 +8,61 @@ function PrivacyPolicy() {
 
       <p>
         At Simply Explained, accessible at
+        {" "}
         https://techkarnan.github.io/simply-explained/,
-        we respect the privacy of our visitors.
-        This Privacy Policy explains how information
-        may be collected and used when you visit
-        our website.
+        we respect the privacy of our visitors. This
+        Privacy Policy explains how information may be
+        collected, used and shared when you visit our website.
       </p>
 
       <h2>1. Information We Collect</h2>
 
       <p>
-        We do not currently require visitors to create
-        accounts or provide personal information to
-        read our articles.
+        Visitors can read our articles without creating
+        an account or providing personal information.
       </p>
 
       <p>
-        If you contact us by email, we may receive
-        your email address and the information you
-        choose to include in your message.
+        If you contact us by email, we may receive your
+        email address and any information you choose to
+        include in your message.
       </p>
 
       <h2>2. Cookies and Similar Technologies</h2>
 
       <p>
-        Our website may use cookies and similar
-        technologies through third-party services.
-        These technologies may help understand website
-        usage and improve the visitor experience.
+        Our website and third-party services may use
+        cookies and similar technologies to understand
+        website usage, improve the visitor experience,
+        measure advertising performance and display
+        relevant advertisements.
       </p>
 
       <h2>3. Google AdSense and Advertising</h2>
 
       <p>
-        We may use Google AdSense to display
-        advertisements on this website.
+        We may use Google AdSense, a service provided
+        by Google, to display advertisements on this
+        website.
       </p>
 
       <p>
         Google and its advertising partners may use
         cookies, web beacons, IP addresses and similar
-        technologies to serve advertisements, measure
-        advertising performance and personalize ads
-        where permitted.
+        technologies to collect information about
+        visitors and their interactions with
+        advertisements. This information may be used
+        to display personalized or non-personalized
+        advertisements, measure ad performance and
+        limit how often an advertisement is shown.
+      </p>
+
+      <p>
+        Google's use of advertising cookies enables
+        Google and its partners to serve advertisements
+        based on visits to this website and other
+        websites, where permitted by applicable settings
+        and consent requirements.
       </p>
 
       <p>
@@ -58,22 +70,40 @@ function PrivacyPolicy() {
         from websites that use its services here:
       </p>
 
-      <a
-        href="https://policies.google.com/technologies/partner-sites"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        How Google uses information from sites or apps
-        that use its services
-      </a>
+      <p>
+        <a
+          href="https://policies.google.com/technologies/partner-sites"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          How Google uses information from sites or apps
+          that use its services
+        </a>
+      </p>
+
+      <p>
+        Visitors can manage their Google advertising
+        preferences here:
+      </p>
+
+      <p>
+        <a
+          href="https://adssettings.google.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Google Ads Settings
+        </a>
+      </p>
 
       <h2>4. Third-Party Services</h2>
 
       <p>
-        Third-party services may collect information
-        according to their own privacy policies.
-        We encourage visitors to review the policies
-        of services they interact with.
+        We may use third-party services, including
+        advertising providers, that collect or process
+        information according to their own privacy
+        policies. We encourage visitors to review those
+        policies.
       </p>
 
       <h2>5. Data Security</h2>
@@ -105,7 +135,7 @@ function PrivacyPolicy() {
 
       <p>
         For questions about this Privacy Policy,
-        contact us at YOUR_EMAIL@example.com.
+        contact us at preetham126tech@gmail.com.
       </p>
     </main>
   );

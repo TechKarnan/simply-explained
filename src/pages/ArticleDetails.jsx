@@ -1,28 +1,58 @@
-
 import { Link, useParams } from "react-router-dom";
+import {
+  ArrowLeft,
+  BookOpen,
+  Clock,
+  Lightbulb,
+  Calculator,
+  TrendingUp,
+  Wallet,
+  CheckCircle2
+} from "lucide-react";
 import { articles } from "../data/articles";
+
+const sectionIcons = [
+  Lightbulb,
+  Calculator,
+  TrendingUp,
+  Clock,
+  BookOpen,
+  Wallet,
+  Lightbulb,
+  CheckCircle2
+];
 
 function ArticleDetails() {
   const { slug } = useParams();
 
   const article = articles.find(
-    (item) => item.slug === slug
+    (item) => item.slug === slug || item.id === slug
   );
 
   if (!article) {
-    return <h2>Article not found</h2>;
+    return <main className="article-details"><h2>Article not found</h2></main>;
   }
 
   return (
     <main className="article-details">
-      <Link to="/articles" className="back-link">
-        ← Back to Articles
-      </Link>
 
-      <div className="article-content">
-        <span className="article-category">
-          {article.category}
-        </span>
+      <div className="article-top">
+        <Link to="/articles" className="back-link">
+          <ArrowLeft size={17} /> Back to Articles
+        </Link>
+      </div>
+
+      <article className="article-content">
+
+        <div className="article-meta">
+          <span className="article-category">
+            <BookOpen size={15} /> {article.category}
+          </span>
+
+          <span className="reading-time">
+            <Clock size={15} /> {article.readTime}
+          </span>
+        </div>
 
         <h1>{article.title}</h1>
 
@@ -30,34 +60,71 @@ function ArticleDetails() {
           {article.description}
         </p>
 
-        <small>{article.readTime}</small>
+        <div className="article-intro">
+          <Lightbulb size={23} />
+          <p>
+            Welcome to Simply Explained! We break down complicated
+            concepts into simple explanations, practical examples
+            and everyday experiences.
+          </p>
+        </div>
 
-        <hr />
+        {article.content?.map((section, index) => {
+          const SectionIcon =
+            sectionIcons[index % sectionIcons.length];
 
-        <h2>Introduction</h2>
+          return (
+            <section className="article-section" key={index}>
 
-        <p>
-          Welcome to Simply Explained! Our goal is to
-          understand complicated concepts using simple
-          language and everyday examples.
-        </p>
+              <h2>
+                <span className="section-icon">
+                  <SectionIcon size={20} />
+                </span>
+                {section.heading}
+              </h2>
 
-        <h2>Let's understand with an example</h2>
+              {section.paragraphs?.map((paragraph, pIndex) => (
+                <p key={pIndex}>{paragraph}</p>
+              ))}
 
-        <p>
-          Imagine you are explaining this concept to a
-          friend who has never heard about it before.
-          Start with something familiar from everyday life.
-        </p>
+              {section.table && (
+                <div className="article-table-wrapper">
+                  <table className="article-table">
+                    <thead>
+                      <tr>
+                        {section.table[0].map((heading, hIndex) => (
+                          <th key={hIndex}>{heading}</th>
+                        ))}
+                      </tr>
+                    </thead>
 
-        <h2>Key takeaways</h2>
+                    <tbody>
+                      {section.table.slice(1).map((row, rIndex) => (
+                        <tr key={rIndex}>
+                          {row.map((cell, cIndex) => (
+                            <td key={cIndex}>{cell}</td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
 
-        <ul>
-          <li>Understand the basic concept first.</li>
-          <li>Connect it with a real-world example.</li>
-          <li>Learn why it matters in everyday life.</li>
-        </ul>
-      </div>
+            </section>
+          );
+        })}
+
+        <div className="article-end">
+          <CheckCircle2 size={22} />
+          <span>You've reached the end. Keep learning!</span>
+        </div>
+
+        <Link to="/articles" className="more-articles-link">
+          <ArrowLeft size={17} /> Explore more articles
+        </Link>
+
+      </article>
     </main>
   );
 }

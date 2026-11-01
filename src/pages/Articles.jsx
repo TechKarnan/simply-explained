@@ -18,7 +18,7 @@ function Articles() {
 
             <small>{article.readTime}</small>
 
-            <Link to={`/articles/${article.slug}`}>
+            <Link to={`/articles/${article.id}`}>
               Read article →
             </Link>
           </article>
