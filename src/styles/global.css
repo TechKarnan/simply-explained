@@ -251,3 +251,61 @@ a {
   border-top: 1px solid #eee;
   margin: 35px 0;
 }
+
+
+.info-page {
+  max-width: 850px;
+  margin: 60px auto;
+  padding: 0 24px;
+  min-height: 55vh;
+}
+
+.info-page h1 {
+  font-size: 38px;
+  margin-bottom: 25px;
+}
+
+.info-page h2 {
+  margin-top: 32px;
+  font-size: 23px;
+}
+
+.info-page p,
+.info-page li {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.info-page a {
+  color: #5146c7;
+  overflow-wrap: anywhere;
+}
+
+.footer {
+  background: #202124;
+  color: white;
+  padding: 40px 8%;
+  margin-top: 60px;
+}
+
+.footer p {
+  color: #ccc;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin: 25px 0;
+}
+
+.footer-links a {
+  color: white;
+}
+
+.copyright {
+  border-top: 1px solid #444;
+  padding-top: 20px;
+  font-size: 13px;
+}
